@@ -1,10 +1,15 @@
 from langchain.prompts import PromptTemplate  # Importa la clase para crear plantillas de prompts
 from langchain_aws import BedrockLLM         # Importa el modelo BedrockLLM para usar AWS Bedrock
 
+
+from dotenv import load_dotenv  # Agrega esta línea
+
 import boto3                                 # SDK de AWS para Python, permite crear clientes para servicios AWS
 import os                                    # Permite interactuar con el sistema operativo (variables de entorno)
 import streamlit as st                       # Framework para crear interfaces web interactivas
 
+
+load_dotenv(dotenv_path=".env") 
 # Configura el perfil de AWS que se usará para las credenciales
 os.environ["AWS_PROFILE"] = "219399226095"
 
